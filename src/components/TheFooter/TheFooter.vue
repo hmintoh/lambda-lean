@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="footer">
     <span v-for="(key, index) in Object.keys(office)" :key="index">
       \
       <strong>{{ key }}:</strong>
@@ -25,7 +25,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-footer {
+.footer {
   text-align: center;
+  font-size: $font-size-s;
+  padding: $spacing-l 0;
 }
 </style>
