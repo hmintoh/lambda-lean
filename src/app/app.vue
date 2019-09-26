@@ -15,5 +15,6 @@ export default {
   width: 100%;
   margin: auto;
   height: 100vh;
+  max-width: $media-query-ldesktop;
 }
 </style>
