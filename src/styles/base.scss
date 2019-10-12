@@ -12,41 +12,115 @@
   font-size: 1rem;
   font-family: "Open Sans", "sans-serif";
   font-weight: $font-weight-normal;
-  line-height: 1.4;
   color: $color-grey-500;
 }
 
 h1 {
-  font-size: $font-size-4xl;
+  font-size: $font-size-3xl;
   font-weight: $font-weight-bold;
+  line-height: $line-height-s;
+  margin-bottom: $spacing-m;
 }
 
 h2 {
-  font-size: $font-size-3xl;
+  font-size: $font-size-2xl;
   font-weight: $font-weight-bold;
+  line-height: $line-height-s;
+  margin-bottom: $spacing-m;
 }
 
 h3 {
-  font-size: $font-size-2xl;
+  font-size: $font-size-xl;
   font-weight: $font-weight-bold;
+  line-height: $line-height-s;
+  margin-bottom: $spacing-s;
 }
 
 h4 {
-  font-size: $font-size-xl;
+  font-size: $font-size-l;
   font-weight: $font-weight-semi-bold;
+  line-height: $line-height-s;
+  margin-bottom: $spacing-xs;
 }
 
 h5 {
-  font-size: $font-size-l;
+  font-size: $font-size-m;
   font-weight: $font-weight-semi-bold;
+  line-height: $line-height-s;
+  margin-bottom: $spacing-xs;
 }
 
 h6 {
-  font-size: $font-size-m;
+  font-size: $font-size-s;
   font-weight: $font-weight-semi-bold;
+  line-height: $line-height-s;
+  margin-bottom: $spacing-xs;
 }
 
 p {
-  font-size: $font-size-m;
+  font-size: $font-size-s;
   font-weight: $font-weight-normal;
+  line-height: $line-height-m;
+  margin-bottom: $spacing-m;
+}
+
+p + ul {
+  margin-top: -$spacing-s;
+}
+
+ul {
+  margin-left: $spacing-l;
+}
+
+li {
+  font-size: $font-size-s;
+  padding-bottom: $spacing-3xs;
+
+  &:last-child {
+    padding-bottom: 0;
+    margin-bottom: $spacing-m;
+  }
+}
+
+@media (min-width: $media-query-tablet) {
+  h1 {
+    font-size: $font-size-4xl;
+  }
+
+  h2 {
+    font-size: $font-size-3xl;
+  }
+
+  h3 {
+    font-size: $font-size-2xl;
+  }
+
+  h4 {
+    font-size: $font-size-xl;
+  }
+
+  h5 {
+    font-size: $font-size-l;
+  }
+
+  h5 {
+    font-size: $font-size-m;
+  }
+
+  p {
+    font-size: $font-size-m;
+  }
+
+  p + ul {
+    margin-top: -$spacing-2xs;
+  }
+
+  li {
+    font-size: $font-size-m;
+
+    &:last-child {
+      padding-bottom: 0;
+      margin-bottom: $spacing-m;
+    }
+  }
 }
