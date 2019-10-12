@@ -27,7 +27,13 @@ export default {
 <style lang="scss" scoped>
 .footer {
   text-align: center;
-  font-size: $font-size-s;
+  font-size: $font-size-xs;
   padding: $spacing-l 0;
+}
+
+@media (min-width: $media-query-tablet) {
+  .footer {
+    font-size: $font-size-s;
+  }
 }
 </style>
