@@ -16,5 +16,7 @@ export default {
   margin: auto;
   height: 100vh;
   max-width: $media-query-ldesktop;
+  box-sizing: border-box;
+  padding: 0 $spacing-m;
 }
 </style>
