@@ -15,49 +15,56 @@
   color: $color-grey-500;
 }
 
-h1 {
+h1,
+.heading-h1 {
   font-size: $font-size-3xl;
   font-weight: $font-weight-bold;
   line-height: $line-height-s;
   margin-bottom: $spacing-m;
 }
 
-h2 {
+h2,
+.heading-h2 {
   font-size: $font-size-2xl;
   font-weight: $font-weight-bold;
   line-height: $line-height-s;
   margin-bottom: $spacing-m;
 }
 
-h3 {
+h3,
+.heading-h3 {
   font-size: $font-size-xl;
   font-weight: $font-weight-bold;
   line-height: $line-height-s;
   margin-bottom: $spacing-s;
 }
 
-h4 {
+h4,
+.heading-h4 {
   font-size: $font-size-l;
   font-weight: $font-weight-semi-bold;
   line-height: $line-height-s;
   margin-bottom: $spacing-xs;
 }
 
-h5 {
+h5,
+.heading-h5 {
   font-size: $font-size-m;
   font-weight: $font-weight-semi-bold;
   line-height: $line-height-s;
   margin-bottom: $spacing-xs;
 }
 
-h6 {
+h6,
+.heading-h6 {
   font-size: $font-size-s;
   font-weight: $font-weight-semi-bold;
   line-height: $line-height-s;
   margin-bottom: $spacing-xs;
 }
 
-p {
+p,
+.body-m {
   font-size: $font-size-s;
   font-weight: $font-weight-normal;
   line-height: $line-height-m;
@@ -83,31 +90,38 @@ li {
 }
 
 @media (min-width: $media-query-tablet) {
-  h1 {
+  h1,
+  .heading-h1 {
     font-size: $font-size-4xl;
   }
 
-  h2 {
+  h2,
+  .heading-h2 {
     font-size: $font-size-3xl;
   }
 
-  h3 {
+  h3,
+  .heading-h3 {
     font-size: $font-size-2xl;
   }
 
-  h4 {
+  h4,
+  .heading-h4 {
     font-size: $font-size-xl;
   }
 
-  h5 {
+  h5,
+  .heading-h5 {
     font-size: $font-size-l;
   }
 
-  h5 {
+  h6,
+  .heading-h6 {
     font-size: $font-size-m;
   }
 
-  p {
+  p,
+  .body-m {
     font-size: $font-size-m;
   }
 
