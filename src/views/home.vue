@@ -31,19 +31,12 @@
         </div>
       </transition>
     </section>
-
-    <TheFooter />
   </main>
 </template>
 
 <script>
-import TheFooter from "~Components/TheFooter/TheFooter.vue";
-
 export default {
   name: "ViewHome",
-  components: {
-    TheFooter
-  },
   data() {
     return {
       pageLoaded: false
@@ -60,10 +53,9 @@ main {
   text-align: center;
   display: flex;
   flex-flow: column;
-  height: 100%;
+  height: -webkit-fill-available;
 
   .content {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,7 +64,7 @@ main {
   }
 
   .hero {
-    padding: $spacing-2xl 0;
+    padding: $spacing-xl 0;
 
     img {
       width: 100%;
@@ -85,7 +77,7 @@ main {
     }
 
     &__body {
-      width: 80%;
+      width: 70%;
       margin: auto;
     }
   }
@@ -94,7 +86,7 @@ main {
 @media (min-width: $media-query-tablet) {
   main {
     .content {
-      width: 75%;
+      width: 80%;
     }
 
     .summary {
@@ -106,20 +98,15 @@ main {
 }
 
 @media (min-width: $media-query-desktop) {
-  main {
-    .content {
-      width: 60%;
-    }
-  }
 }
 
 .fade-enter-active {
-  transition: $transition-fade;
+  transition: $transition-slow;
   transition-delay: 0.5s;
 }
 
 .fade-delay-enter-active {
-  transition: $transition-fade;
+  transition: $transition-slow;
   transition-delay: 1s;
 }
 

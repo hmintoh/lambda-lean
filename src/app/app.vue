@@ -1,22 +1,27 @@
 <template>
   <div id="app">
     <router-view></router-view>
+    <TheFooter />
   </div>
 </template>
 
 <script>
+import TheFooter from "~Components/TheFooter/TheFooter.vue";
 export default {
-  name: "App"
+  name: "App",
+  components: {
+    TheFooter
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 #app {
-  width: 100%;
+  min-height: 100vh;
   margin: auto;
-  height: 100vh;
-  max-width: $media-query-ldesktop;
   box-sizing: border-box;
   padding: 0 $spacing-m;
+  max-width: $media-query-desktop;
+  padding-bottom: $spacing-3xl;
 }
 </style>
