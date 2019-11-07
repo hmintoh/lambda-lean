@@ -17,7 +17,7 @@ export default {
       office: {
         Address: "#05-03, 196 Pandan Loop, Singapore 128384",
         Phone: "+65 6779 2226",
-        Emaill: "tim@lambda.sg"
+        Email: "hello@lambda.sg"
       }
     };
   }
