@@ -39,12 +39,17 @@
               </li>
             </ul>
 
-            <p>Some of our Live work include:</p>
+            <p>Some of our recent Live work include:</p>
             <ul>
               <li v-for="(work, index) in liveKeyWorks" :key="index">
                 {{ work }}
               </li>
             </ul>
+
+            <p>
+              The full list of clients we have worked for can be found
+              <a href="/portfolio">here</a>
+            </p>
           </div>
         </BaseHoverCard>
       </section>
@@ -62,7 +67,7 @@
               simply consultation for speaker systems, we are able to support
               all needs and deliver solutions that far exceed expectations.
             </p>
-            <p>Some of our Designs include:</p>
+            <p>We have designed for:</p>
             <ul>
               <li
                 v-for="(design, index) in fixedInstallationsDesigns"
@@ -105,9 +110,9 @@
           <div slot="detailText">
             <p>
               Even the best sound systems can be marred by poor acoustics in a
-              given space and therefore we have dedicated some of our time and
-              energy to help our clients achieve optimal solutions for the
-              acoustics in their given space.
+              given space. We have dedicated some of our time and energy to help
+              our clients achieve optimal solutions for the acoustics in their
+              given space.
             </p>
             <p>
               We have the ability to advise on acoustic and spatial design while
@@ -153,7 +158,9 @@ export default {
         "Lighthouse Evangelism 40th Anniversary - Zepp @ Bigbox"
       ],
       fixedInstallationsDesigns: [
-        "Riverlife Church Singapore",
+        "St. Andrew's Cathedral Singapore (Cathedral New Sanctuary)",
+        "Burning Hearts @ 66 Kampung Bugis",
+        "Petra Church Singapore",
         "Impact Life Church Singapore"
       ]
     };
