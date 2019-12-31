@@ -1,0 +1,11 @@
+.lambda-link {
+  color: inherit;
+  text-decoration: none;
+  padding-bottom: $spacing-3xs / 4;
+  border-bottom: 1px solid $color-grey-400;
+  
+  &:hover {
+    font-weight: $font-weight-bold;
+    transition: $transition-fast;
+  }
+}
