@@ -1,18 +1,6 @@
 <template>
   <main>
-    <transition name="fade">
-      <div v-if="pageLoaded">
-        <router-link title="Back to Home" to="/">
-          <img
-            src="/_assets/images/lambda_logo.svg"
-            alt="lambda-logo"
-            width="60"
-            height="60"
-            class="lambda_logo"
-          />
-        </router-link>
-      </div>
-    </transition>
+    <TheNavbar />
 
     <div class="grid">
       <section>
@@ -127,13 +115,14 @@
 </template>
 
 <script>
+import TheNavbar from "~Components/TheNavbar/TheNavbar.vue";
 import BaseHoverCard from "~Components/BaseHoverCard/BaseHoverCard.vue";
-import getViewport from "~Scripts/getViewport.js";
 
 export default {
   name: "ViewServices",
   components: {
-    BaseHoverCard
+    BaseHoverCard,
+    TheNavbar
   },
   data() {
     return {
