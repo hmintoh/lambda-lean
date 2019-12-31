@@ -96,23 +96,5 @@ main {
     }
   }
 }
-
-@media (min-width: $media-query-desktop) {
-}
-
-.fade-enter-active {
-  transition: $transition-slow;
-  transition-delay: 0.5s;
-}
-
-.fade-delay-enter-active {
-  transition: $transition-slow;
-  transition-delay: 1s;
-}
-
-.fade-enter,
-.fade-delay-enter {
-  opacity: 0;
-}
 </style>
 

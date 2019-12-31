@@ -36,7 +36,7 @@
 
             <p>
               The full list of clients we have worked for can be found
-              <a href="/portfolio">here</a>
+              <a href="/portfolio" class="lambda-link">here</a>
             </p>
           </div>
         </BaseHoverCard>
@@ -184,14 +184,6 @@ main {
     margin-left: $spacing-2xl;
     width: 80%;
   }
-}
-
-.fade-enter-active {
-  transition: $transition-slow;
-}
-
-.fade-enter {
-  opacity: 0;
 }
 </style>
 
