@@ -14,7 +14,10 @@
       <nav class="container__nav">
         <ul>
           <li v-for="(route, index) in routes" :key="index">
-            <a :href="route.url" class="lambda-link">
+            <a
+              :href="route.url"
+              :class="['lambda-link', { active: activeRoute === route.url }]"
+            >
               {{ route.label }}
             </a>
           </li>
@@ -27,6 +30,11 @@
 <script>
 export default {
   name: "TheFooter",
+  props: {
+    activeRoute: {
+      type: String
+    }
+  },
   data() {
     return {
       pageLoaded: false,
@@ -64,6 +72,10 @@ export default {
     > ul li {
       padding: 0 0 0 $spacing-l;
       margin-bottom: $spacing-xs;
+    }
+
+    .active {
+      font-weight: $font-weight-bold;
     }
   }
 }
