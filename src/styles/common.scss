@@ -3,9 +3,23 @@
   text-decoration: none;
   padding-bottom: $spacing-3xs / 4;
   border-bottom: 1px solid $color-grey-400;
-  
+
   &:hover {
     font-weight: $font-weight-bold;
     transition: $transition-fast;
+  }
+}
+
+.typesetting-article {
+  h2,
+  .heading-h2 {
+    margin-top: $spacing-l;
+    margin-bottom: $spacing-m;
+  }
+
+  h3,
+  .heading-h3 {
+    margin-top: $spacing-m;
+    margin-bottom: $spacing-s;
   }
 }
