@@ -8,13 +8,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const PrerenderSPAPlugin = require("prerender-spa-plugin");
 const PuppeteerRenderer = require("@prerenderer/renderer-puppeteer");
 
-const ROUTES = require("../src/app/router.js");
-let routesArray = [];
-
-for (let route of ROUTES.routes) {
-  routesArray.push(route.path);
-}
-
+let routesArray = ["/", "/services", "/portfolio"];
 console.log(routesArray);
 
 module.exports = merge(baseConfig, {
