@@ -2,7 +2,7 @@
   <main>
     <TheNavbar activeRoute="/services" />
 
-    <div class="main-wrapper">
+    <div class="main-wrapper text-container">
       <BaseAccordion id="live" class="section" title="LIVE">
         <p>
           We have been blessed to be a part of many keystone events in some of
@@ -158,7 +158,6 @@ h2 {
 @media (min-width: $media-query-tablet) {
   main {
     margin-left: $spacing-2xl;
-    width: 80%;
   }
 }
 </style>

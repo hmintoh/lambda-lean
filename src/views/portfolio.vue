@@ -3,7 +3,7 @@
     <TheNavbar activeRoute="/portfolio" />
 
     <div class="main-wrapper typesetting-article">
-      <section>
+      <section class="text-container">
         <h1>Portfolio</h1>
         <p>
           Explore our list of projects that we have completed over the years.
@@ -26,7 +26,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="text-container">
         <h2>Past Projects</h2>
         <section v-for="(category, index) in pastProjects" :key="index">
           <h3>{{ category.label }}</h3>
@@ -38,7 +38,7 @@
         </section>
       </section>
 
-      <section>
+      <section class="text-container">
         <h2>In the news</h2>
       </section>
     </div>

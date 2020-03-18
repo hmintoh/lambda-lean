@@ -23,3 +23,9 @@
     margin-bottom: $spacing-m;
   }
 }
+
+@media (min-width: $media-query-tablet) {
+  .text-container {
+    width: 80%;
+  }
+}

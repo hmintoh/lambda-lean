@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div v-if="pageLoaded" class="container">
+    <div v-if="pageLoaded" class="container text-container">
       <router-link title="Back to Home" to="/">
         <img
           src="/_assets/images/lambda_logo.svg"
