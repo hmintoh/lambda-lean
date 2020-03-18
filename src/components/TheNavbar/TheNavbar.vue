@@ -56,9 +56,6 @@ export default {
   justify-content: space-between;
   padding: $spacing-xl 0 $spacing-2xl 0;
 
-  &__logo {
-  }
-
   &__nav {
     display: flex;
     align-items: flex-end;

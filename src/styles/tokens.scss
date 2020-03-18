@@ -49,4 +49,8 @@ $line-height-s: 1.2;
 // animations
 $transition-slow: all 3s ease-in-out;
 $transition-default: all 1s ease-in-out;
-$transition-fast: all 0.3s ease-in-out;
+$transition-fast: all 0.2s ease-in-out;
+
+//box-shadows
+$box-shadow-grey-100: 4px 4px 11px 0px rgba(242, 242, 242, 1);
+$box-shadow-grey-200: 4px 4px 11px 0px rgba(214, 214, 214, 1);
