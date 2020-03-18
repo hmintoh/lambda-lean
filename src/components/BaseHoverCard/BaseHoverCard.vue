@@ -1,21 +1,16 @@
 <template>
   <div
-    :id="id"
-    class="card-container"
+    class="hover-card"
     @click="revealDetailText = !revealDetailText"
+    @mouseenter="revealDetailText = true"
+    @mouseleave="revealDetailText = false"
   >
     <div class="initialText-container">
       <slot name="initialText" />
     </div>
 
-    <transition
-      name="slide"
-      @before-enter="beforeEnter"
-      @enter="enter"
-      @before-leave="beforeLeave"
-      @leave="leave"
-    >
-      <div v-show="revealDetailText" class="detailText-container">
+    <transition name="fade">
+      <div v-if="revealDetailText" class="detailText-container">
         <slot name="detailText" />
       </div>
     </transition>
@@ -27,69 +22,37 @@ import getViewport from "~Scripts/getViewport.js";
 
 export default {
   name: "BaseHoverCard",
-  props: {
-    id: {
-      type: String,
-      required: true
-    }
-  },
   data() {
     return {
       revealDetailText: false
     };
   },
-  methods: {
-    beforeEnter: function(el) {
-      el.style.height = "0";
-      el.style.opacity = "0";
-    },
-    enter: function(el) {
-      el.style.height = el.scrollHeight + "px";
-      el.style.opacity = "1";
-    },
-    beforeLeave: function(el) {
-      el.style.height = el.scrollHeight + "px";
-      el.style.opacity = "1";
-    },
-    leave: function(el) {
-      el.style.height = "0";
-      el.style.opacity = "0";
-    }
-  }
+  methods: {}
 };
 </script>
 
 <style lang="scss" scoped>
-.card-container {
+.hover-card {
   box-sizing: border-box;
-  cursor: default;
-  -webkit-box-shadow: 4px 4px 11px 0px rgba(242, 242, 242, 1);
-  -moz-box-shadow: 4px 4px 11px 0px rgba(242, 242, 242, 1);
-  box-shadow: 4px 4px 11px 0px rgba(242, 242, 242, 1);
-
-  &:hover {
-    -webkit-box-shadow: 4px 4px 11px 0px rgba(214, 214, 214, 1);
-    -moz-box-shadow: 4px 4px 11px 0px rgba(214, 214, 214, 1);
-    box-shadow: 4px 4px 11px 0px rgba(214, 214, 214, 1);
-    transition: $transition-default;
-  }
-}
-
-.initialText-container {
-  cursor: pointer;
-  padding: $spacing-m;
-  background: $color-grey-100;
+  width: 100%;
+  position: relative;
 }
 
 .detailText-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
   padding: $spacing-m;
   overflow: hidden;
-}
-
-.slide {
-  &-enter-active,
-  &-leave-active {
-    transition: $transition-fast;
-  }
+  background: $color-grey-500;
+  opacity: 0.8;
+  color: $color-white;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
 }
 </style>
