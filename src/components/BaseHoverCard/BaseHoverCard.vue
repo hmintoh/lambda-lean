@@ -19,8 +19,6 @@
 </template>
 
 <script>
-import getViewport from "~Scripts/getViewport.js";
-
 export default {
   name: "BaseHoverCard",
   props: {
@@ -74,6 +72,7 @@ export default {
   right: 0;
   bottom: 0;
   z-index: 1;
+  cursor: default;
 }
 
 @media (min-width: $media-query-tablet) {

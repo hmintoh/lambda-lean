@@ -8,14 +8,20 @@
       <div v-if="pageLoaded" class="main-wrapper typesetting-article">
         <section class="text-container">
           <h1>Portfolio</h1>
-          <p>
-            Explore our list of projects that we have completed over the years.
+          <p class="body--intro">
+            Explore some of the projects that we have completed over the years.
           </p>
         </section>
 
         <section>
-          <h2>Designs</h2>
-          <p>Test</p>
+          <div class="text-container">
+            <h2>Designs</h2>
+            <p>
+              We take pride in producing high quality acoustic drawings which we
+              include in our installation proposals to demonstrate and evidence
+              the acoustic coverage of our solutions.
+            </p>
+          </div>
           <div class="carousel-wrapper">
             <div class="carousel">
               <BaseHoverCard
@@ -33,6 +39,9 @@
 
         <section class="text-container">
           <h2>Past Projects</h2>
+          <p>
+            Some of the clients we have worked with over the years:
+          </p>
           <section v-for="(category, index) in pastProjects" :key="index">
             <h3>{{ category.label }}</h3>
             <ul>
@@ -43,9 +52,9 @@
           </section>
         </section>
 
-        <section class="text-container">
+        <!-- <section class="text-container">
           <h2>In the news</h2>
-        </section>
+        </section> -->
       </div>
     </transition>
   </main>
@@ -100,29 +109,29 @@ export default {
       ],
       pastProjects: [
         {
-          label: "Live",
+          label: "Live events",
           list: [
-            "Kingdom Invasion 2016 - Suntec City Convention Center",
-            "Who is Jesus Musical - Esplanade Theatres on the Bay",
-            "Kingdom Invasion 2017 - Singapore Expo & Convention Center",
-            "Wan Ren He Yi Song 2017 - Singapore Indoor Stadium",
-            "Snowglobed 2017 - Cornerstone Community Church",
-            "Kingdom Invasion 2018 - Singapore Expo & Convention Center",
+            "Lighthouse Evangelism 40th Anniversary - Zepp @ Bigbox",
             "The Room Easter Production 2018 - Cornerstone Community Church",
-            "Lighthouse Evangelism 40th Anniversary - Zepp @ Bigbox"
+            "Kingdom Invasion 2018 - Singapore Expo & Convention Center",
+            "Snowglobed 2017 - Cornerstone Community Church",
+            "Wan Ren He Yi Song 2017 - Singapore Indoor Stadium",
+            "Kingdom Invasion 2017 - Singapore Expo & Convention Center",
+            "Who is Jesus Musical - Esplanade Theatres on the Bay",
+            "Kingdom Invasion 2016 - Suntec City Convention Center"
           ]
         },
         {
-          label: "Fixed",
+          label: "Fixed installations",
           list: [
-            "Kingdom Invasion 2016 - Suntec City Convention Center",
-            "Who is Jesus Musical - Esplanade Theatres on the Bay",
-            "Kingdom Invasion 2017 - Singapore Expo & Convention Center",
-            "Wan Ren He Yi Song 2017 - Singapore Indoor Stadium",
-            "Snowglobed 2017 - Cornerstone Community Church",
-            "Kingdom Invasion 2018 - Singapore Expo & Convention Center",
+            "Lighthouse Evangelism 40th Anniversary - Zepp @ Bigbox",
             "The Room Easter Production 2018 - Cornerstone Community Church",
-            "Lighthouse Evangelism 40th Anniversary - Zepp @ Bigbox"
+            "Kingdom Invasion 2018 - Singapore Expo & Convention Center",
+            "Snowglobed 2017 - Cornerstone Community Church",
+            "Wan Ren He Yi Song 2017 - Singapore Indoor Stadium",
+            "Kingdom Invasion 2017 - Singapore Expo & Convention Center",
+            "Who is Jesus Musical - Esplanade Theatres on the Bay",
+            "Kingdom Invasion 2016 - Suntec City Convention Center"
           ]
         }
       ]

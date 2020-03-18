@@ -8,21 +8,21 @@
       <div v-if="pageLoaded" class="main-wrapper text-container">
         <BaseAccordion id="live" class="section" title="LIVE">
           <p>
-            We have been blessed to be a part of many keystone events in some of
-            the largest arenas locally. Attention to detail and proper speaker
-            system design are what we believe allow us to achieve our highest
-            ideals of pursuing presence. Our AV rental partners help us access
-            the best speaker systems from renowned manufacturers like
-            L’Acoustics and d & b Audiotechnik.
+            We are blessed have been a part of many keystone events in some of
+            the largest arenas in Singapore. We believe that attention to detail
+            and proper speaker design are what allows us to consistently achieve
+            our highest ideals of pursuing <em>presence</em>. Together with our
+            AV rental partners, we are able to offer our clients some of the
+            best speaker systems from renowned manufacturers such as L’Acoustics
+            and d & b Audiotechnik.
           </p>
           <p>
             We have a team of highly experienced audio engineers and consultants
-            who are able to take on any live audio production needs at any
-            scale.
+            who are able to meet live audio production needs at any scale. Some
+            of our Key clients include:
           </p>
-          <p>Our Key Clients:</p>
           <ul>
-            <li v-for="(client, indaex) in liveKeyClients" :key="index">
+            <li v-for="(client, index) in liveKeyClients" :key="index">
               {{ client }}
             </li>
           </ul>
@@ -35,8 +35,8 @@
           </ul>
 
           <p>
-            The full list of clients we have worked for can be found
-            <a href="/portfolio" class="lambda-link">here</a>
+            A full list of clients we have worked with can be found
+            <a href="/portfolio" class="lambda-link">here</a>.
           </p>
         </BaseAccordion>
 
@@ -46,13 +46,22 @@
           title="FIXED INSTALLATION + CONSULTATION"
         >
           <p>
-            Over the years, our niche has always been local venues especially
-            Houses of Worship with audio design and consultation. Be it full
-            turn-key solutions that respect the budget given or consultation for
-            speaker systems, we are able to support all needs and deliver
-            solutions that far exceed expectations.
+            Over the years, our niche lies in audio design and consultation for
+            local venues, espcially for Houses of Worship. We strongly believe
+            in faithful stewardship of funds and believe our advantage lies in
+            being able to advise the best systems both meet the budget as well
+            as the client's needs.
           </p>
-          <p>We have designed for:</p>
+
+          <p>
+            Be they full turn-key solutions or consultation for speaker systems,
+            we are able to support our client and deliver solutions that far
+            exceed expectations.
+          </p>
+
+          <p>
+            Our notable clients include:
+          </p>
           <ul>
             <li
               v-for="(design, index) in fixedInstallationsDesigns"
@@ -69,15 +78,16 @@
           title="BROADCAST + STUDIO"
         >
           <p>
-            We have worked with various clients on broadcast projects using
-            dedicated broadcast feeds via traditional as well as modern
-            platforms such as Facebook Live.
+            We have worked with a number of clients on broadcast projects and
+            have experience in working with dedicated broadcast feeds via
+            traditional as well as modern platforms such as Facebook Live.
           </p>
           <p>
-            We also have a suite of equipment that allows us to do multitrack
-            live recording and post production for events. Our engineers have
-            vast experience producing the best audio post production that
-            captures the essence and feel of the actual event being documented.
+            For events, we have a suite of high quality equipment that allows to
+            do multitrack live recording and post production. Our engineers have
+            many years of experience and have produced some of the best audio
+            post production that were able to capture the essence and
+            <em>presence</em> of the actual event being documented.
           </p>
         </BaseAccordion>
 
@@ -87,14 +97,10 @@
           title="ACOUSTIC DESIGN + TREATMENT"
         >
           <p>
-            Even the best sound systems can be marred by poor acoustics in a
-            given space. We dedicate our time and energy to help our clients
-            create optimal solutions for the acoustics in their given space.
-          </p>
-          <p>
-            We have the ability to advise on acoustic and spatial design while
-            working with architects on new projects as well as improving the
-            acoustics of an existing space.
+            Even the best sound systems can be marred by poor acoustics. Be it a
+            new or existing space, we dedicate our time and energy to design
+            solutions that allow for optimal acoustic coverage in our client's
+            spaces.
           </p>
         </BaseAccordion>
       </div>
@@ -133,7 +139,7 @@ export default {
         "Facebook Singapore"
       ],
       liveKeyWorks: [
-        "The Tsoh Show Christmas Production – Cornerstone Community Church, Singapore",
+        "The Tsoh Show Christmas Production 2019 – Cornerstone Community Church, Singapore",
         "Experiencing God The Musical 2019 – St. Andrew’s Cathedral, Singapore",
         "LifeFest 2019 - St. Andrew’s Cathedral, Singapore",
         "SingLang 2019 – National Stadium, Singapore Sports Hub",

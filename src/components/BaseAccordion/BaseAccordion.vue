@@ -1,7 +1,7 @@
 <template>
   <div :id="id" class="accordion" @click="revealDetailText = !revealDetailText">
-    <div class="accordion--title">
-      <span class="heading-h3">{{ title }}</span>
+    <div class="accordion--title heading-h3">
+      {{ title }}
     </div>
 
     <transition
