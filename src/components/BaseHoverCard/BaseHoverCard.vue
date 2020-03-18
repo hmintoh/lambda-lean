@@ -1,17 +1,18 @@
 <template>
   <div
     class="hover-card"
-    @click="revealDetailText = !revealDetailText"
     @mouseenter="revealDetailText = true"
     @mouseleave="revealDetailText = false"
   >
-    <div class="initialText-container">
+    <div :style="applyBackgroundStyles()">
       <slot name="initialText" />
     </div>
 
     <transition name="fade">
       <div v-if="revealDetailText" class="detailText-container">
-        <slot name="detailText" />
+        <div>
+          <slot />
+        </div>
       </div>
     </transition>
   </div>
@@ -22,12 +23,29 @@ import getViewport from "~Scripts/getViewport.js";
 
 export default {
   name: "BaseHoverCard",
+  props: {
+    imgSrc: {
+      type: String
+    },
+    imgAlt: {
+      type: String
+    }
+  },
   data() {
     return {
       revealDetailText: false
     };
   },
-  methods: {}
+  methods: {
+    applyBackgroundStyles() {
+      return {
+        height: "460px",
+        backgroundImage: `url(${this.imgSrc})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      };
+    }
+  }
 };
 </script>
 
@@ -35,7 +53,9 @@ export default {
 .hover-card {
   box-sizing: border-box;
   width: 100%;
+  height: 100%;
   position: relative;
+  margin-right: $spacing-s;
 }
 
 .detailText-container {
@@ -46,13 +66,19 @@ export default {
   align-items: center;
   padding: $spacing-m;
   overflow: hidden;
-  background: $color-grey-500;
-  opacity: 0.8;
+  background: linear-gradient(transparent, $color-grey-400, $color-grey-500);
+  opacity: 0.9;
   color: $color-white;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 1;
+}
+
+@media (min-width: $media-query-tablet) {
+  .detailText-container {
+    padding: $spacing-m $spacing-3xl;
+  }
 }
 </style>

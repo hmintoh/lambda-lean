@@ -36,6 +36,7 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 2;
 }
 
 @media (min-width: $media-query-tablet) {
