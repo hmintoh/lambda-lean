@@ -8,6 +8,15 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const PrerenderSPAPlugin = require("prerender-spa-plugin");
 const PuppeteerRenderer = require("@prerenderer/renderer-puppeteer");
 
+const ROUTES = require("../src/app/router.js");
+let routesArray = [];
+
+for (let route of ROUTES.routes) {
+  routesArray.push(route.path);
+}
+
+console.log(routesArray);
+
 module.exports = merge(baseConfig, {
   mode: "production",
   plugins: [
@@ -22,15 +31,10 @@ module.exports = merge(baseConfig, {
         optimizationLevel: 5
       },
       pngquant: {
-        // Instructs pngquant to use the least amount of colors required
-        // to meet or exceed the max quality.
-        // Min and max are numbers in range 0 (worst) to 1 (perfect), similar to JPEG.
         quality: "50-80"
       },
       gifsicle: {
-        // Interlace gif for progressive rendering.
         interlaced: true,
-        // Determines how much optimization is done
         optimizationLevel: 3
       },
       svgo: {
@@ -41,19 +45,17 @@ module.exports = merge(baseConfig, {
       }
     }),
 
-    // Extract imported CSS into .css files
     new MiniCssExtractPlugin({
       filename: "[name].[hash].min.css",
       chunkFilename: "[id].[hash].min.css"
     }),
 
-    // Pre-render the app
     new PrerenderSPAPlugin({
       staticDir: path.join(__dirname, "../dist"),
       outputDir: path.join(__dirname, "../dist"),
       indexPath: path.join(__dirname, "../dist/index.html"),
 
-      routes: ["/", "/services"],
+      routes: routesArray,
 
       renderer: new PuppeteerRenderer({
         renderAfterDocumentEvent: "app.rendered",
