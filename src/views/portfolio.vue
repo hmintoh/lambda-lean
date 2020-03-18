@@ -57,6 +57,14 @@ import BaseHoverCard from "~Components/BaseHoverCard/BaseHoverCard.vue";
 
 export default {
   name: "ViewPortfolio",
+  head: {
+    title: {
+      inner: "Portfolio"
+    },
+    meta: [
+      { name: "description", content: "A description of the page", id: "desc" }
+    ]
+  },
   components: {
     BaseHoverCard,
     TheNavbar

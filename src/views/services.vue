@@ -22,7 +22,7 @@
           </p>
           <p>Our Key Clients:</p>
           <ul>
-            <li v-for="(client, index) in liveKeyClients" :key="index">
+            <li v-for="(client, indaex) in liveKeyClients" :key="index">
               {{ client }}
             </li>
           </ul>
@@ -108,6 +108,14 @@ import BaseAccordion from "~Components/BaseAccordion/BaseAccordion.vue";
 
 export default {
   name: "ViewServices",
+  head: {
+    title: {
+      inner: "Services"
+    },
+    meta: [
+      { name: "description", content: "A description of the page", id: "desc" }
+    ]
+  },
   components: {
     BaseAccordion,
     TheNavbar

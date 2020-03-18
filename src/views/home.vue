@@ -37,6 +37,14 @@
 <script>
 export default {
   name: "ViewHome",
+  head: {
+    title: {
+      inner: "Home"
+    },
+    meta: [
+      { name: "description", content: "A description of the page", id: "desc" }
+    ]
+  },
   data() {
     return {
       pageLoaded: false

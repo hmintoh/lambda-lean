@@ -1,9 +1,11 @@
 import Vue from "vue";
+import VueHead from "vue-head";
 import VueRouter from "vue-router";
 import App from "./app.vue";
 import router from "./router";
 import "~Styles/_.scss";
 
+Vue.use(VueHead);
 Vue.use(VueRouter);
 
 const Router = new VueRouter({
