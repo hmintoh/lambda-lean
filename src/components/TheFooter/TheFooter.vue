@@ -28,7 +28,7 @@ export default {
 .footer {
   text-align: center;
   font-size: $font-size-2xs;
-  padding: $spacing-l $spacing-m;
+  padding: $spacing-m;
   box-sizing: border-box;
   background: $color-white;
   width: 100%;
@@ -41,6 +41,7 @@ export default {
 
 @media (min-width: $media-query-tablet) {
   .footer {
+    padding: $spacing-l $spacing-m;
     font-size: $font-size-xs;
   }
 }

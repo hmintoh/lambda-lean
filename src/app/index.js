@@ -1,12 +1,15 @@
 import Vue from "vue";
 import VueHead from "vue-head";
 import VueRouter from "vue-router";
+import Vue2TouchEvents from "vue2-touch-events";
+
 import App from "./app.vue";
 import router from "./router";
 import "~Styles/_.scss";
 
 Vue.use(VueHead);
 Vue.use(VueRouter);
+Vue.use(Vue2TouchEvents);
 
 const Router = new VueRouter({
   scrollBehavior() {

@@ -3,6 +3,7 @@
     class="hover-card"
     @mouseenter="revealDetailText = true"
     @mouseleave="revealDetailText = false"
+    v-touch:touch="touchHandler"
   >
     <div :style="applyBackgroundStyles()">
       <slot name="initialText" />
@@ -43,6 +44,9 @@ export default {
         backgroundPosition: "center"
       };
     }
+  },
+  touchHandler() {
+    this.revealDetailText = !this.revealDetailText;
   }
 };
 </script>

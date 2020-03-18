@@ -15,8 +15,8 @@
 
       <transition name="fade-delay">
         <div v-if="pageLoaded" class="summary">
-          <h1 class="summary__title body--l">// PURSUING PRESENCE //</h1>
-          <div class="summary__body">
+          <h1 class="summary--title">// PURSUING PRESENCE //</h1>
+          <div class="summary--body">
             <p>
               Musical presence defines why an individual prefers the acoustics
               of a room to another or why one prefers a certian audio mix to
@@ -80,7 +80,11 @@ main {
   }
 
   .summary {
-    &__body {
+    &--title {
+      font-size: $font-size-xl;
+    }
+
+    &--body {
       width: 70%;
       margin: auto;
     }
@@ -94,7 +98,7 @@ main {
     }
 
     .summary {
-      &__title {
+      &--title {
         font-size: $font-size-2xl;
       }
     }
