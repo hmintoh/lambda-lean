@@ -1,47 +1,53 @@
 <template>
   <main>
-    <TheNavbar activeRoute="/portfolio" />
+    <transition name="fade-delay">
+      <TheNavbar v-if="pageLoaded" activeRoute="/portfolio" />
+    </transition>
 
-    <div class="main-wrapper typesetting-article">
-      <section class="text-container">
-        <h1>Portfolio</h1>
-        <p>
-          Explore our list of projects that we have completed over the years.
-        </p>
-      </section>
+    <transition name="fade">
+      <div v-if="pageLoaded" class="main-wrapper typesetting-article">
+        <section class="text-container">
+          <h1>Portfolio</h1>
+          <p>
+            Explore our list of projects that we have completed over the years.
+          </p>
+        </section>
 
-      <section>
-        <h2>Designs</h2>
-        <p>Test</p>
-        <div class="carousel-wrapper">
-          <div class="carousel">
-            <BaseHoverCard v-for="(design, index) in designs" :key="index">
-              <img slot="initialText" :src="design.imgSrc" width="100%" />
-              <div slot="detailText">
+        <section>
+          <h2>Designs</h2>
+          <p>Test</p>
+          <div class="carousel-wrapper">
+            <div class="carousel">
+              <BaseHoverCard
+                v-for="(design, index) in designs"
+                :key="index"
+                :imgSrc="design.imgSrc"
+                :imgAlt="design.label"
+              >
                 <h3>{{ design.label }}</h3>
                 <p>{{ design.description }}</p>
-              </div>
-            </BaseHoverCard>
+              </BaseHoverCard>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section class="text-container">
-        <h2>Past Projects</h2>
-        <section v-for="(category, index) in pastProjects" :key="index">
-          <h3>{{ category.label }}</h3>
-          <ul>
-            <li v-for="(project, index) in category.list" :key="index">
-              {{ project }}
-            </li>
-          </ul>
         </section>
-      </section>
 
-      <section class="text-container">
-        <h2>In the news</h2>
-      </section>
-    </div>
+        <section class="text-container">
+          <h2>Past Projects</h2>
+          <section v-for="(category, index) in pastProjects" :key="index">
+            <h3>{{ category.label }}</h3>
+            <ul>
+              <li v-for="(project, index) in category.list" :key="index">
+                {{ project }}
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section class="text-container">
+          <h2>In the news</h2>
+        </section>
+      </div>
+    </transition>
   </main>
 </template>
 
@@ -60,24 +66,28 @@ export default {
       pageLoaded: false,
       designs: [
         {
-          label: "Project 1",
-          description: "Project 1 description",
-          imgSrc: "/_assets/images/speaker_coverage.png"
+          label: "St. Andrews Cathedral",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis leo id nunc maximus, in molestie elit faucibus. Duis condimentum metus ac odio sollicitudin, eu mattis ligula bibendum",
+          imgSrc: "/_assets/images/SAC-cns-2019-1.png"
         },
         {
-          label: "Project 2",
-          description: "Project 2 description",
-          imgSrc: "/_assets/images/speaker_coverage.png"
+          label: "St.Andrews Cathedral",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis leo id nunc maximus, in molestie elit faucibus. Duis condimentum metus ac odio sollicitudin, eu mattis ligula bibendum",
+          imgSrc: "/_assets/images/SAC-cns-2019-2.png"
         },
         {
-          label: "Project 3",
-          description: "Project 3 description",
-          imgSrc: "/_assets/images/speaker_coverage.png"
+          label: "Singlang 2019",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis leo id nunc maximus, in molestie elit faucibus. Duis condimentum metus ac odio sollicitudin, eu mattis ligula bibendum",
+          imgSrc: "/_assets/images/singlang-2019-1.png"
         },
         {
-          label: "Project 4",
-          description: "Project 4 description",
-          imgSrc: "/_assets/images/speaker_coverage.png"
+          label: "Singlang 2019",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis leo id nunc maximus, in molestie elit faucibus. Duis condimentum metus ac odio sollicitudin, eu mattis ligula bibendum",
+          imgSrc: "/_assets/images/singlang-2019-2.png"
         }
       ],
       pastProjects: [
@@ -117,7 +127,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$hover-card-width: 700px;
+$hover-card-width: 740px;
+$hover-card-height: 460px;
+$hover-card-width-mobile: 320px;
 
 main {
   display: flex;
@@ -135,16 +147,20 @@ main {
     position: relative;
 
     > .hover-card {
-      min-width: $hover-card-width;
+      min-width: $hover-card-width-mobile;
+      min-height: 100%;
     }
   }
 
   .carousel:hover .hover-card {
-    opacity: 0.3;
+    transition: $transition-fast;
+    opacity: 0.5;
+    filter: grayscale(100%);
 
     &:hover {
       transition: $transition-fast;
       opacity: 1;
+      filter: none;
     }
   }
 }
@@ -152,6 +168,15 @@ main {
 @media (min-width: $media-query-tablet) {
   main {
     margin-left: $spacing-2xl;
+  }
+
+  .carousel-wrapper {
+    .carousel {
+      > .hover-card {
+        min-width: $hover-card-width;
+        min-height: $hover-card-height;
+      }
+    }
   }
 }
 </style>

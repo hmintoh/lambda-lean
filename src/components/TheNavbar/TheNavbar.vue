@@ -1,30 +1,28 @@
 <template>
-  <transition name="fade">
-    <div v-if="pageLoaded" class="container text-container">
-      <router-link title="Back to Home" to="/">
-        <img
-          src="/_assets/images/lambda_logo.svg"
-          alt="lambda-logo"
-          width="60"
-          height="60"
-          class="container__logo"
-        />
-      </router-link>
+  <div class="container text-container">
+    <router-link title="Back to Home" to="/">
+      <img
+        src="/_assets/images/lambda_logo.svg"
+        alt="lambda-logo"
+        width="60"
+        height="60"
+        class="container__logo"
+      />
+    </router-link>
 
-      <nav class="container__nav">
-        <ul>
-          <li v-for="(route, index) in routes" :key="index">
-            <a
-              :href="route.url"
-              :class="['lambda-link', { active: activeRoute === route.url }]"
-            >
-              {{ route.label }}
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </transition>
+    <nav class="container__nav">
+      <ul>
+        <li v-for="(route, index) in routes" :key="index">
+          <a
+            :href="route.url"
+            :class="['lambda-link', { active: activeRoute === route.url }]"
+          >
+            {{ route.label }}
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </template>
 
 <script>
@@ -37,15 +35,11 @@ export default {
   },
   data() {
     return {
-      pageLoaded: false,
       routes: [
         { url: "/services", label: "Services" },
         { url: "/portfolio", label: "Portfolio" }
       ]
     };
-  },
-  mounted() {
-    this.pageLoaded = true;
   }
 };
 </script>
