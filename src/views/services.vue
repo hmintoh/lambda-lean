@@ -49,8 +49,8 @@
             Over the years, our niche lies in audio design and consultation for
             local venues, espcially for Houses of Worship. We strongly believe
             in faithful stewardship of funds and believe our advantage lies in
-            being able to advise the best systems both meet the budget as well
-            as the client's needs.
+            being able to advise the best systems that both meet the budget as
+            well as the client's needs.
           </p>
 
           <p>
@@ -85,8 +85,8 @@
           <p>
             For events, we have a suite of high quality equipment that allows to
             do multitrack live recording and post production. Our engineers have
-            many years of experience and have produced some of the best audio
-            post production that were able to capture the essence and
+            many years of experience and have produced some of the best content
+            that were able to capture the essence and
             <em>presence</em> of the actual event being documented.
           </p>
         </BaseAccordion>
