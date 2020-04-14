@@ -82,6 +82,7 @@ main {
   .summary {
     &--title {
       font-size: $font-size-xl;
+      letter-spacing: 0.5px;
     }
 
     &--body {

@@ -21,7 +21,6 @@ h1,
   font-weight: $font-weight-bold;
   line-height: $line-height-s;
   margin-bottom: $spacing-m;
-  letter-spacing: 0.5px;
 }
 
 h2,
@@ -29,7 +28,6 @@ h2,
   font-size: $font-size-2xl;
   font-weight: $font-weight-bold;
   line-height: $line-height-s;
-  letter-spacing: 0.5px;
 }
 
 h3,
@@ -90,11 +88,13 @@ li {
   h1,
   .heading-h1 {
     font-size: $font-size-4xl;
+    // letter-spacing: 0.5px;
   }
 
   h2,
   .heading-h2 {
     font-size: $font-size-3xl;
+    // letter-spacing: 0.5px;
   }
 
   h3,
