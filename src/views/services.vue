@@ -59,9 +59,7 @@
             exceed expectations.
           </p>
 
-          <p>
-            Our notable clients include:
-          </p>
+          <p>Our notable clients include:</p>
           <ul>
             <li
               v-for="(design, index) in fixedInstallationsDesigns"
@@ -109,8 +107,8 @@
 </template>
 
 <script>
-import TheNavbar from "~Components/TheNavbar/TheNavbar.vue";
-import BaseAccordion from "~Components/BaseAccordion/BaseAccordion.vue";
+import TheNavbar from "~Components/TheNavbar.vue";
+import BaseAccordion from "~Components/BaseAccordion.vue";
 
 export default {
   name: "ViewServices",

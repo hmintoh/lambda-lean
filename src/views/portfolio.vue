@@ -67,8 +67,8 @@
 </template>
 
 <script>
-import TheNavbar from "~Components/TheNavbar/TheNavbar.vue";
-import BaseHoverCard from "~Components/BaseHoverCard/BaseHoverCard.vue";
+import TheNavbar from "~Components/TheNavbar.vue";
+import BaseHoverCard from "~Components/BaseHoverCard.vue";
 
 export default {
   name: "ViewPortfolio",

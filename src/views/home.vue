@@ -61,7 +61,7 @@ main {
   text-align: center;
   display: flex;
   flex-flow: column;
-  height: -webkit-fill-available;
+  background: red;
 
   .content {
     display: flex;
@@ -69,6 +69,7 @@ main {
     justify-content: center;
     margin: auto;
     width: 100%;
+    height: inherit;
   }
 
   .hero {

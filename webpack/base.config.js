@@ -10,24 +10,28 @@ const DEV_ENV = process.env.NODE_ENV !== "production";
 module.exports = {
   mode: "development",
   entry: {
-    app: path.resolve(__dirname, "../src/app/index.js")
+    app: path.resolve(__dirname, "../src/app/index.js"),
   },
   output: {
-    filename: DEV_ENV ? "[name].bundle.[hash].js" : "[name].bundle.[hash].min.js",
-    chunkFilename: DEV_ENV ? "[name].bundle.[chunkhash].js" : "[name].bundle.[chunkhash].min.js",
+    filename: DEV_ENV
+      ? "[name].bundle.[hash].js"
+      : "[name].bundle.[hash].min.js",
+    chunkFilename: DEV_ENV
+      ? "[name].bundle.[chunkhash].js"
+      : "[name].bundle.[chunkhash].min.js",
     path: path.resolve(__dirname, "../dist"),
-    publicPath: "/"
+    publicPath: "/",
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: "babel-loader"
+        use: "babel-loader",
       },
       {
         test: /\.vue$/,
-        use: "vue-loader"
+        use: "vue-loader",
       },
       {
         test: /\.(c|sc|sa)ss$/,
@@ -37,43 +41,46 @@ module.exports = {
             options: DEV_ENV
               ? { sourceMap: true }
               : {
-                  publicPath: path.resolve(__dirname, "../dist/~assets/stylesheets")
-                }
+                  publicPath: path.resolve(
+                    __dirname,
+                    "../dist/~assets/stylesheets"
+                  ),
+                },
           },
           {
             loader: "css-loader",
             options: {
-              sourceMap: DEV_ENV ? true : false
-            }
+              sourceMap: DEV_ENV ? true : false,
+            },
           },
           {
             loader: "postcss-loader",
             options: {
               sourceMap: DEV_ENV ? true : false,
-              plugins: [require("autoprefixer")]
-            }
+              plugins: [require("autoprefixer")],
+            },
           },
           {
             loader: "sass-loader",
             options: {
-              sourceMap: DEV_ENV ? true : false
-            }
+              sourceMap: DEV_ENV ? true : false,
+            },
           },
           {
             loader: "sass-resources-loader",
             options: {
               sourceMap: DEV_ENV ? true : false,
-              resources: [path.resolve(__dirname, "../src/styles/_.scss")]
-            }
-          }
+              resources: [path.resolve(__dirname, "../src/styles/_.scss")],
+            },
+          },
         ],
-        include: path.resolve(__dirname, "../")
+        include: path.resolve(__dirname, "../"),
       },
       {
         test: /\.(woff|woff2|eot|ttf)$/,
-        use: [{ loader: "url-loader", options: { limit: 100000 } }]
-      }
-    ]
+        use: [{ loader: "url-loader", options: { limit: 100000 } }],
+      },
+    ],
   },
   resolve: {
     alias: {
@@ -83,8 +90,8 @@ module.exports = {
       "~Scripts": path.resolve(__dirname, "../src/scripts"),
       "~Assets": path.resolve(__dirname, "../src/assets"),
       "~Components": path.resolve(__dirname, "../src/components"),
-      "~Views": path.resolve(__dirname, "../src/views")
-    }
+      "~Views": path.resolve(__dirname, "../src/views"),
+    },
   },
   plugins: [
     new VueLoaderPlugin(),
@@ -99,23 +106,23 @@ module.exports = {
         collapseWhitespace: true,
         useShortDoctype: true,
         minifyCSS: true,
-        minifyJS: true
-      }
+        minifyJS: true,
+      },
     }),
 
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, "../src/public"),
-        to: path.resolve(__dirname, "../dist")
+        to: path.resolve(__dirname, "../dist"),
       },
       {
         from: path.resolve(__dirname, "../src/assets/images"),
-        to: path.resolve(__dirname, "../dist/_assets/images")
+        to: path.resolve(__dirname, "../dist/_assets/images"),
       },
       {
         from: path.resolve(__dirname, "../src/assets/fonts"),
-        to: path.resolve(__dirname, "../dist/_assets/fonts")
-      }
-    ])
-  ]
+        to: path.resolve(__dirname, "../dist/_assets/fonts"),
+      },
+    ]),
+  ],
 };

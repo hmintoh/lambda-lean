@@ -6,7 +6,8 @@
 </template>
 
 <script>
-import TheFooter from "~Components/TheFooter/TheFooter.vue";
+import TheFooter from "~Components/TheFooter.vue";
+
 export default {
   name: "App",
   components: {
