@@ -42,7 +42,17 @@ export default {
       inner: "Home"
     },
     meta: [
-      { name: "description", content: "A description of the page", id: "desc" }
+      {
+        name: "description",
+        content:
+          "Lambda Acoustics specialises in studio and live mixing, audio consultation, broadcast and studio",
+        id: "meta-desc"
+      },
+      {
+        name: "keywords",
+        content: "acoustic design,acoustic consultation",
+        id: "meta-keywords"
+      }
     ]
   },
   data() {

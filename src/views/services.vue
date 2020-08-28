@@ -121,7 +121,18 @@ export default {
       inner: "Services"
     },
     meta: [
-      { name: "description", content: "A description of the page", id: "desc" }
+      {
+        name: "description",
+        content:
+          "We offer services in broadcast, studio and live mixing, audio consultation, acoustic design and treatment",
+        id: "meta-desc"
+      },
+      {
+        name: "keywords",
+        content:
+          "audio consultation,live mixing,acoustic design,l-acoustics distributor,d&b audiotechnik distributor",
+        id: "meta-keywords"
+      }
     ]
   },
   components: {

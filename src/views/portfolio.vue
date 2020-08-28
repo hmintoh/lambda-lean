@@ -73,7 +73,17 @@ export default {
       inner: "Portfolio"
     },
     meta: [
-      { name: "description", content: "A description of the page", id: "desc" }
+      {
+        name: "description",
+        content:
+          "Explore some of the projects that we have completed over the years.",
+        id: "meta-desc"
+      },
+      {
+        name: "keywords",
+        content: "Lambda portfolio,Lambda designs,Lambda clients",
+        id: "meta-keywords"
+      }
     ]
   },
   components: {
