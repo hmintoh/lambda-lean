@@ -61,7 +61,7 @@ main {
   text-align: center;
   display: flex;
   flex-flow: column;
-  background: red;
+  padding-top: 40%;
 
   .content {
     display: flex;
@@ -87,7 +87,6 @@ main {
     }
 
     &--body {
-      width: 70%;
       margin: auto;
     }
   }
@@ -95,6 +94,8 @@ main {
 
 @media (min-width: $media-query-tablet) {
   main {
+    padding-top: 20%;
+
     .content {
       width: 80%;
     }
