@@ -14,7 +14,7 @@
             our highest ideals of pursuing <em>presence</em>. Together with our
             AV rental partners, we are able to offer our clients some of the
             best speaker systems from renowned manufacturers such as L’Acoustics
-            and d & b Audiotechnik.
+            and d&b Audiotechnik.
           </p>
           <p>
             We have a team of highly experienced audio engineers and consultants

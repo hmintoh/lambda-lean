@@ -32,6 +32,8 @@ export default {
   list-style-type: none;
   margin-left: 0;
   display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
 
   > li {
     margin-right: 4px;
@@ -42,8 +44,6 @@ export default {
   width: 240px;
   height: 120px;
   opacity: 0.8;
-  align-content: center;
-  justify-content: center;
   display: flex;
   padding: $spacing-m;
   box-sizing: border-box;
