@@ -97,7 +97,7 @@ main {
 
 @media (min-width: $media-query-tablet) {
   main {
-    padding-top: 20%;
+    padding-top: 10%;
 
     .content {
       width: 80%;

@@ -1,6 +1,6 @@
 # lambda website
 
-static site built with [static-site-template-vue](https://github.com/hmintoh/static-site-template-vue.git), hosted on netlify at [https://lambda-sg.netlify.com](https://lambda-sg.netlify.com)
+static site built with [static-site-template-vue](https://github.com/hmintoh/static-site-template-vue.git), hosted at [https://www.lambda.sg](https://www.lambda.sg)
 
 ## Getting started
 
