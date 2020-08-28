@@ -68,28 +68,24 @@ import BaseLinkCardContainer from "~Components/BaseLinkCardContainer.vue";
 
 export default {
   name: "ViewPortfolio",
-  head: {
-    title: {
-      inner: "Portfolio"
-    },
+  components: {
+    TheNavbar,
+    BaseHoverCard,
+    BaseLinkCardContainer,
+  },
+  metaInfo: {
+    title: "Portfolio",
     meta: [
       {
         name: "description",
         content:
           "Explore some of the projects that we have completed over the years.",
-        id: "meta-desc"
       },
       {
         name: "keywords",
         content: "Lambda portfolio,Lambda designs,Lambda clients",
-        id: "meta-keywords"
-      }
-    ]
-  },
-  components: {
-    TheNavbar,
-    BaseHoverCard,
-    BaseLinkCardContainer
+      },
+    ],
   },
   data() {
     return {
@@ -99,26 +95,26 @@ export default {
           label: "St. Andrews Cathedral",
           description:
             "Cathedral New Sanctuary Upgrade – L’Acoustics Wifo System with X12 Downfill and X8 Delay Line",
-          imgSrc: "/_assets/images/SAC-cns-2019-1.png"
+          imgSrc: "/_assets/images/SAC-cns-2019-1.png",
         },
         {
           label: "St.Andrews Cathedral",
           description:
             "Cathedral New Sanctuary Upgrade – L’Acoustics Wifo System with X12 Downfill and X8 Delay Line",
-          imgSrc: "/_assets/images/SAC-cns-2019-2.png"
+          imgSrc: "/_assets/images/SAC-cns-2019-2.png",
         },
         {
           label: "Singlang 2019",
           description:
             "Singapore Sports Hub – L’Acoustics K2 System with K2/Kara Outfills",
-          imgSrc: "/_assets/images/singlang-2019-1.png"
+          imgSrc: "/_assets/images/singlang-2019-1.png",
         },
         {
           label: "Singlang 2019",
           description:
             "Singapore Sports Hub – L’Acoustics K2 System with K2/Kara Outfills",
-          imgSrc: "/_assets/images/singlang-2019-2.png"
-        }
+          imgSrc: "/_assets/images/singlang-2019-2.png",
+        },
       ],
       pastProjects: [
         {
@@ -143,23 +139,23 @@ export default {
             "Kingdom Invasion 2017 - Singapore Expo & Convention Center",
             "Who is Jesus Musical - Esplanade Theatres on the Bay",
             "Impact Life Church - Bigbox Singapore",
-            "Kingdom Invasion 2016 - Suntec City Convention Center"
-          ]
-        }
+            "Kingdom Invasion 2016 - Suntec City Convention Center",
+          ],
+        },
       ],
       inTheNews: [
         {
           href:
             "https://www.worshipavl.com/details/63299-feature-renewing-st-andrew-s-new-sanctuary",
           imgAlt: "Worship AVL logo",
-          imgSrc: "/_assets/images/worship_avl.svg"
-        }
-      ]
+          imgSrc: "/_assets/images/worship_avl.svg",
+        },
+      ],
     };
   },
   mounted() {
     this.pageLoaded = true;
-  }
+  },
 };
 </script>
 

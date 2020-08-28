@@ -116,29 +116,25 @@ import BaseLinkCardContainer from "~Components/BaseLinkCardContainer.vue";
 
 export default {
   name: "ViewServices",
-  head: {
-    title: {
-      inner: "Services"
-    },
+  components: {
+    TheNavbar,
+    BaseAccordion,
+    BaseLinkCardContainer,
+  },
+  metaInfo: {
+    title: "Services",
     meta: [
       {
         name: "description",
         content:
-          "We offer services in broadcast, studio and live mixing, audio consultation, acoustic design and treatment",
-        id: "meta-desc"
+          "We offer services in broadcast, studio and live mixing, audio consultation, acoustic design and treatment.",
       },
       {
         name: "keywords",
         content:
           "audio consultation,live mixing,acoustic design,l-acoustics distributor,d&b audiotechnik distributor",
-        id: "meta-keywords"
-      }
-    ]
-  },
-  components: {
-    TheNavbar,
-    BaseAccordion,
-    BaseLinkCardContainer
+      },
+    ],
   },
   data() {
     return {
@@ -150,7 +146,7 @@ export default {
         "St. Andrew's Cathedral",
         "Grace Assembly of God",
         "Full Gospel Church (JB)",
-        "Facebook Singapore"
+        "Facebook Singapore",
       ],
       liveKeyWorks: [
         "The Tsoh Show Christmas Production 2019 – Cornerstone Community Church, Singapore",
@@ -158,31 +154,31 @@ export default {
         "LifeFest 2019 - St. Andrew’s Cathedral, Singapore",
         "SingLang 2019 – National Stadium, Singapore Sports Hub",
         "Asia’s Got Talent Season 3 Grand Finals – Marina Bay Sands Theatre, Singapore",
-        "Asia’s Got Talent Season 3 Judges Auditions & Semifinals – Pinewood Studios, Malaysia"
+        "Asia’s Got Talent Season 3 Judges Auditions & Semifinals – Pinewood Studios, Malaysia",
       ],
       fixedInstallationsDesigns: [
         "St. Andrew's Cathedral Singapore (Cathedral New Sanctuary)",
         "Burning Hearts @ 66 Kampung Bugis",
         "Petra Church Singapore",
-        "Impact Life Church Singapore"
+        "Impact Life Church Singapore",
       ],
       ourPartners: [
         {
           href: "https://www.dbaudio.com/global/en/",
           imgAlt: "d&b Audiotechnik logo",
-          imgSrc: "/_assets/images/db_logo.svg"
+          imgSrc: "/_assets/images/db_logo.svg",
         },
         {
           href: "https://www.l-acoustics.com/en/",
           imgAlt: "L-Acoustics logo",
-          imgSrc: "/_assets/images/lacoustics_logo.svg"
-        }
-      ]
+          imgSrc: "/_assets/images/lacoustics_logo.svg",
+        },
+      ],
     };
   },
   mounted() {
     this.pageLoaded = true;
-  }
+  },
 };
 </script>
 

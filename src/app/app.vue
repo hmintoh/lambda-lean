@@ -11,8 +11,12 @@ import TheFooter from "~Components/TheFooter.vue";
 export default {
   name: "App",
   components: {
-    TheFooter
-  }
+    TheFooter,
+  },
+  metaInfo: {
+    title: "Home",
+    titleTemplate: "%s | Lambda",
+  },
 };
 </script>
 

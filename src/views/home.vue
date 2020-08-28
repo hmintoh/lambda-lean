@@ -37,32 +37,25 @@
 <script>
 export default {
   name: "ViewHome",
-  head: {
-    title: {
-      inner: "Home"
-    },
+  metaInfo: {
+    title: "Home",
     meta: [
       {
         name: "description",
         content:
           "Lambda Acoustics specialises in studio and live mixing, audio consultation, broadcast and studio",
-        id: "meta-desc"
       },
-      {
-        name: "keywords",
-        content: "acoustic design,acoustic consultation",
-        id: "meta-keywords"
-      }
-    ]
+      { name: "keywords", content: "acoustic design,acoustic consultation" },
+    ],
   },
   data() {
     return {
-      pageLoaded: false
+      pageLoaded: false,
     };
   },
   mounted() {
     this.pageLoaded = true;
-  }
+  },
 };
 </script>
 

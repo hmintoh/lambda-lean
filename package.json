@@ -62,7 +62,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "vue-head": "^2.2.0",
+    "vue-meta": "^2.4.0",
     "vue2-touch-events": "^2.2.1"
   }
 }
