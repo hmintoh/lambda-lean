@@ -68,6 +68,9 @@
               {{ design }}
             </li>
           </ul>
+
+          <p>Our partners:</p>
+          <BaseLinkCardContainer :links="ourPartners" />
         </BaseAccordion>
 
         <BaseAccordion
@@ -109,6 +112,7 @@
 <script>
 import TheNavbar from "~Components/TheNavbar.vue";
 import BaseAccordion from "~Components/BaseAccordion.vue";
+import BaseLinkCardContainer from "~Components/BaseLinkCardContainer.vue";
 
 export default {
   name: "ViewServices",
@@ -121,8 +125,9 @@ export default {
     ]
   },
   components: {
+    TheNavbar,
     BaseAccordion,
-    TheNavbar
+    BaseLinkCardContainer
   },
   data() {
     return {
@@ -149,6 +154,18 @@ export default {
         "Burning Hearts @ 66 Kampung Bugis",
         "Petra Church Singapore",
         "Impact Life Church Singapore"
+      ],
+      ourPartners: [
+        {
+          href: "https://www.dbaudio.com/global/en/",
+          imgAlt: "d&b Audiotechnik logo",
+          imgSrc: "/_assets/images/db_logo.svg"
+        },
+        {
+          href: "https://www.l-acoustics.com/en/",
+          imgAlt: "L-Acoustics logo",
+          imgSrc: "/_assets/images/lacoustics_logo.svg"
+        }
       ]
     };
   },

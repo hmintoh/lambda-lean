@@ -54,12 +54,7 @@
 
         <section class="text-container">
           <h2>In the news</h2>
-          <a
-            href="https://www.worshipavl.com/details/63299-feature-renewing-st-andrew-s-new-sanctuary"
-            target="_blank"
-            class="in_the_news_container"
-            ><img src="/_assets/images/worship_avl.svg" />
-          </a>
+          <BaseLinkCardContainer :links="inTheNews" />
         </section>
       </div>
     </transition>
@@ -69,6 +64,7 @@
 <script>
 import TheNavbar from "~Components/TheNavbar.vue";
 import BaseHoverCard from "~Components/BaseHoverCard.vue";
+import BaseLinkCardContainer from "~Components/BaseLinkCardContainer.vue";
 
 export default {
   name: "ViewPortfolio",
@@ -81,8 +77,9 @@ export default {
     ]
   },
   components: {
+    TheNavbar,
     BaseHoverCard,
-    TheNavbar
+    BaseLinkCardContainer
   },
   data() {
     return {
@@ -139,6 +136,14 @@ export default {
             "Kingdom Invasion 2016 - Suntec City Convention Center"
           ]
         }
+      ],
+      inTheNews: [
+        {
+          href:
+            "https://www.worshipavl.com/details/63299-feature-renewing-st-andrew-s-new-sanctuary",
+          imgAlt: "Worship AVL logo",
+          imgSrc: "/_assets/images/worship_avl.svg"
+        }
       ]
     };
   },
@@ -184,27 +189,6 @@ main {
       opacity: 1;
       filter: none;
     }
-  }
-}
-
-.in_the_news_container {
-  width: 240px;
-  height: 180px;
-  opacity: 0.8;
-  align-content: center;
-  justify-content: center;
-  display: flex;
-  padding: $spacing-m;
-  box-sizing: border-box;
-  align-items: center;
-  border-radius: 4px;
-  box-shadow: $box-shadow-grey-100;
-  background: linear-gradient($color-grey-100, $color-grey-200);
-
-  &:hover {
-    transition: $transition-fast;
-    box-shadow: $box-shadow-grey-200;
-    background: $color-grey-200;
   }
 }
 
